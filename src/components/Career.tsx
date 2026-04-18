@@ -30,7 +30,7 @@ const Career = () => {
             <div className="career-info-in">
               <div className="career-role">
                 <h4>Frontend Developer</h4>
-                <h5>Internee.pk</h5>
+                
               </div>
               <h3>2025</h3>
             </div>
@@ -45,7 +45,7 @@ const Career = () => {
             <div className="career-info-in">
               <div className="career-role">
                 <h4>WordPress Developer</h4>
-                <h5>Internee.pk</h5>
+               
               </div>
               <h3>2024</h3>
             </div>
