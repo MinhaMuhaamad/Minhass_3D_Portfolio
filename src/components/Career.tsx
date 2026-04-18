@@ -21,9 +21,7 @@ const Career = () => {
               <h3>2026</h3>
             </div>
             <p>
-              Currently enrolled in the 8th semester of Software Engineering at
-              FAST-NUCES. Coursework covers software architecture, design patterns,
-              Agile development, UML modeling, test automation, and AI-driven systems.
+              Final-year Software Engineering student at FAST-NUCES specializing in MERN stack, software architecture, Agile practices, testing, and AI-driven solutions, with a focus on Generative AI.
             </p>
           </div>
           <div className="career-info-box">
