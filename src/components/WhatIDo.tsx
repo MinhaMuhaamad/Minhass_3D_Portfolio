@@ -1,12 +1,10 @@
 import { useEffect, useRef } from "react";
 import "./styles/WhatIDo.css";
-
 const WhatIDo = () => {
   const containerRef = useRef<(HTMLDivElement | null)[]>([]);
   const setRef = (el: HTMLDivElement | null, index: number) => {
     containerRef.current[index] = el;
   };
-
   useEffect(() => {
     // Always use click-based interaction (no hover expand on any device)
     containerRef.current.forEach((container) => {
@@ -15,7 +13,6 @@ const WhatIDo = () => {
         container.addEventListener("click", () => handleClick(container));
       }
     });
-
     return () => {
       containerRef.current.forEach((container) => {
         if (container) {
@@ -151,9 +148,7 @@ const WhatIDo = () => {
     </div>
   );
 };
-
 export default WhatIDo;
-
 function handleClick(container: HTMLDivElement) {
   container.classList.toggle("what-content-active");
   container.classList.remove("what-sibling");

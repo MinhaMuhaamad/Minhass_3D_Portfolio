@@ -2,40 +2,41 @@ import { useState, useCallback } from "react";
 import "./styles/Work.css";
 import WorkImage from "./WorkImage";
 import { MdArrowBack, MdArrowForward } from "react-icons/md";
+const base = import.meta.env.BASE_URL;
 const projects = [
   {
     title: "Intellifit",
     category: "AI-Powered Fitness & Nutrition Platform",
     tools: "Next.js, React, Node.js, Express, MongoDB, AI Chatbot",
-    image: "/images/intellifit.png",
+    image: `${base}images/intellifit.png`,
     link: "https://github.com/emaanfatima28/Intellifit",
   },
   {
     title: "EduConnect Pakistan",
     category: "Tutor Booking & Learning Platform",
     tools: "MongoDB, Express, React, Node.js, REST API, Role-based Auth",
-    image: "/images/educonnect.png",
+    image: `${base}images/educonnect.png`,
     link: "https://github.com/MinhaMuhaamad/EDUsystem",
   },
   {
     title: "Traffic Management System",
     category: "Traffic Management",
     tools: "MongoDB, Express, React, Node.js, REST API, Algorithms",
-    image: "/images/traffic.png",
+    image: `${base}images/traffic.png`,
     link: "",
   },
   {
     title: "Empathetic Chatbot",
     category: "Emotion-Aware Conversational AI",
     tools: "PyTorch, Streamlit, NLP, EmpatheticDialogues Dataset",
-    image: "/images/chatbot.png",
+    image: `${base}images/chatbot.png`,
     link: "https://github.com/MinhaMuhaamad/Chatbot_project",
   },
   {
     title: "Course Scheduler",
     category: "Real-Time Course Scheduling App",
     tools: "HTML, CSS, JavaScript, EJS, Node.js, Express, MongoDB",
-    image: "/images/scheduler.png",
+    image: `${base}images/scheduler.png`,
     link: "https://github.com/MinhaMuhaamad/EDUsystem",
   },
 ];

@@ -8,12 +8,13 @@ interface Props {
   link?: string;
 }
 
+const base = import.meta.env.BASE_URL;
 const WorkImage = (props: Props) => {
   const [isVideo, setIsVideo] = useState(false);
   const [video, setVideo] = useState("");
   const hasLink = Boolean(props.link && props.link.trim());
 
-  const imageSrc = props.image || "/images/placeholder.webp";
+  const imageSrc = props.image || `${base}images/placeholder.webp`;
 
   const handleMouseEnter = async () => {
     if (props.video) {
