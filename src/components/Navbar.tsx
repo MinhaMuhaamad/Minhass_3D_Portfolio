@@ -46,7 +46,7 @@ const Navbar = () => {
           MG
         </a>
         <a
-          href=" https://www.linkedin.com/in/minha-muhammad/"
+          href=" https://www.linkedin.com/in/minha-muhammad/ "
           className="navbar-connect"
           data-cursor="disable"
           target="_blank"
