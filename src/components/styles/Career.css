@@ -75,7 +75,7 @@
   font-size: 20px;
   text-transform: capitalize;
   margin: 10px 0px;
-  color: var(--accentColor);           /* rose-pink company name */
+  color: var(--accentColor);
 }
 
 /* ── Timeline ── */
@@ -120,6 +120,17 @@
       0px 0px 15px 5px var(--accentDark),
       0px 0px 110px 20px var(--accentDeeper);
   }
+}
+
+/* ── Muted style for older entries (2024, 2025) ── */
+.career-info-box.career-past h3,
+.career-info-box.career-past h4 {
+  opacity: 0.45;
+}
+
+/* ── Active / current entry (2026) ── */
+.career-info-box.career-current h3 {
+  color: var(--accentColor);
 }
 
 /* ── Responsive ── */
