@@ -1,6 +1,5 @@
 import { MdArrowOutward, MdCopyright } from "react-icons/md";
 import "./styles/Contact.css";
-
 const Contact = () => {
   return (
     <div className="contact-section section-container" id="contact">
@@ -11,12 +10,12 @@ const Contact = () => {
             <h4>Connect</h4>
             <p>
               <a
-                href="https://www.linkedin.com/in/minha-ghulam-muhammad"
+                href=" https://www.linkedin.com/in/minha-muhammad/"
                 target="_blank"
                 rel="noreferrer"
                 data-cursor="disable"
               >
-                LinkedIn — minha-ghulam-muhammad
+                LinkedIn 
               </a>
             </p>
             <p>
@@ -27,17 +26,17 @@ const Contact = () => {
                 minhaghulammuhammad@gmail.com
               </a>
             </p>
-            <p>03146842477</p>
+            
             <h4>Education</h4>
             <p>
-              B.S. Software Engineering, FAST-NUCES — 2022–Present (8th Semester)
+              B.S. Software Engineering, FAST-NUCES 2022–Present 
             </p>
             <p>Faisalabad, Pakistan</p>
           </div>
           <div className="contact-box">
             <h4>Social</h4>
             <a
-              href="https://github.com/"
+              href="https://github.com/MinhaMuhaamad/"
               target="_blank"
               rel="noreferrer"
               data-cursor="disable"
@@ -46,7 +45,7 @@ const Contact = () => {
               GitHub <MdArrowOutward />
             </a>
             <a
-              href="https://www.linkedin.com/in/minha-ghulam-muhammad"
+              href="https://www.linkedin.com/in/minha-muhammad/"
               target="_blank"
               rel="noreferrer"
               data-cursor="disable"
@@ -56,17 +55,12 @@ const Contact = () => {
             </a>
           </div>
           <div className="contact-box">
-            <h2>
-              Designed and Developed <br /> by <span>Minha Ghulam Muhammad</span>
-            </h2>
-            <h5>
-              <MdCopyright /> 2026
-            </h5>
+            
+            
           </div>
         </div>
       </div>
     </div>
   );
 };
-
 export default Contact;
