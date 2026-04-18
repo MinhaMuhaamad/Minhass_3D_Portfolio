@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap");
+
+/*
+  ─────────────────────────────────────────────
+  COLOR PALETTE (from provided swatch):
+    --bg:         #f0f2f0  (light grey / off-white)
+    --bg-deep:    #1e1a20  (near-black)
+    --accent:     #8e3257  (deep rose-mauve)
+    --accent2:    #5c2a4a  (dark plum/purple)
+    --text:       #1e1a20
+    --text-light: #f0f2f0
+    --mid:        #3d2040  (mid purple)
+  ─────────────────────────────────────────────
+*/
+
+:root {
+  font-family: "Geist", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  line-height: 1.5;
+  scroll-behavior: smooth;
+  color-scheme: light dark;
+  color: var(--textPrimary);
+  background-color: var(--backgroundColor);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+
+  /* ── New palette ── */
+  --accentColor:     #b3478f;   /* strong rose-pink for links & highlights */
+  --accentDark:      #6f2751;   /* deep plum for darker accents             */
+  --accentDeeper:    #40203c;   /* dark purple for depth                    */
+  --accentMid:       #54395c;   /* mid purple for gradients                 */
+  --backgroundColor: #ececec;  /* light grey page background               */
+  --bgSurface:       #f5f4f4;  /* light surface tone for cards / panels    */
+  --bgLight:         #ffffff;  /* near-white accents and block backgrounds */
+  --textPrimary:     #232026;  /* strong dark text for readability         */
+  --textMuted:       #6a5b6d;  /* medium contrast muted text               */
+  --vh: 100vh;
+  --vh: 100svh;
+}
+html, body, #root {
+  min-height: 100%;
+  background-color: var(--backgroundColor);
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Geist", sans-serif;
+  color: var(--textPrimary);
+}
+body {
+  overflow: hidden;
+  color: var(--textPrimary);
+  margin: 0;
+  height: auto;
+  background-color: var(--backgroundColor);
+  flex-grow: 1;
+  --cWidth: calc(100% - 30px);
+  --cMaxWidth: 1920px;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+a {
+  color: var(--accentColor);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accentDark);
+}
+
+main {
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.main-active {
+  opacity: 0;
+  animation: fadeIn 1s 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  100% { opacity: 1; }
+}
+
+.main-body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.container-main {
+  width: 100%;
+  margin: auto;
+  position: relative;
+}
+
+.container1 {
+  width: var(--cWidth);
+  height: var(--vh);
+  margin: auto;
+  position: relative;
+}
+
+.split-line  { overflow: hidden; }
+.split-h2 {
+  overflow: hidden;
+  display: flex;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+}
+
+.techstack {
+  width: 100%;
+  position: relative;
+  overflow: clip;
+  height: var(--vh);
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: -100px;
+}
+
+.techstack h2 {
+  font-size: 80px;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  top: 120px;
+  left: 0;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 768px) {
+  body { --cWidth: 94%; }
+}
+@media screen and (max-width: 900px) {
+  .techstack h2 { font-size: 40px; }
+}
