@@ -11,6 +11,10 @@ interface Props {
 const WorkImage = (props: Props) => {
   const [isVideo, setIsVideo] = useState(false);
   const [video, setVideo] = useState("");
+  const hasLink = Boolean(props.link && props.link.trim());
+
+  const imageSrc = props.image || "/images/placeholder.webp";
+
   const handleMouseEnter = async () => {
     if (props.video) {
       setIsVideo(true);
@@ -21,24 +25,42 @@ const WorkImage = (props: Props) => {
     }
   };
 
+  const imageContent = (
+    <>
+      {hasLink && (
+        <div className="work-link">
+          <MdArrowOutward />
+        </div>
+      )}
+      <img src={imageSrc} alt={props.alt || "Project preview"} loading="lazy" />
+      {isVideo && <video src={video} autoPlay muted playsInline loop></video>}
+    </>
+  );
+
   return (
     <div className="work-image">
-      <a
-        className="work-image-in"
-        href={props.link}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={() => setIsVideo(false)}
-        target="_blank"
-        data-cursor={"disable"}
-      >
-        {props.link && (
-          <div className="work-link">
-            <MdArrowOutward />
-          </div>
-        )}
-        <img src={props.image} alt={props.alt} />
-        {isVideo && <video src={video} autoPlay muted playsInline loop></video>}
-      </a>
+      {hasLink ? (
+        <a
+          className="work-image-in"
+          href={props.link}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={() => setIsVideo(false)}
+          target="_blank"
+          rel="noreferrer"
+          data-cursor="disable"
+        >
+          {imageContent}
+        </a>
+      ) : (
+        <div
+          className="work-image-in"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={() => setIsVideo(false)}
+          data-cursor="disable"
+        >
+          {imageContent}
+        </div>
+      )}
     </div>
   );
 };
