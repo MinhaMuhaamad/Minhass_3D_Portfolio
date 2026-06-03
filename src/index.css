@@ -141,3 +141,21 @@ main {
 @media screen and (max-width: 900px) {
   .techstack h2 { font-size: 40px; }
 }
+
+@media screen and (max-width: 1024px) {
+  .tech-canvas {
+    pointer-events: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .techstack {
+    height: 75vh;
+    margin-top: 30px;
+    margin-bottom: -50px;
+  }
+  .techstack h2 {
+    font-size: 36px;
+    top: 60px;
+  }
+}
