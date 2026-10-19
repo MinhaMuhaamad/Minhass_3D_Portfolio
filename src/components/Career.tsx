@@ -12,16 +12,19 @@ const Career = () => {
           <div className="career-timeline">
             <div className="career-dot"></div>
           </div>
-          <div className="career-info-box">
+          <div className="career-info-box career-current">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Software Engineering</h4>
-                <h5>FAST-NUCES, Faisalabad</h5>
+                <h4>Junior Full Stack Developer</h4>
+                <h5>Webix Solutions</h5>
               </div>
-              <h3>2026</h3>
+              <div className="career-date-box">
+                <h3>2026</h3>
+                <span className="career-date-badge">August 2026 – Present</span>
+              </div>
             </div>
             <p>
-              Final-year Software Engineering student at FAST-NUCES specializing in MERN stack, software architecture, Agile practices, testing, and AI-driven solutions, with a focus on Generative AI.
+              • Engineered production-ready web applications by building responsive frontend interfaces and robust backend APIs, ensuring seamless full-stack performance across all devices.
             </p>
           </div>
           <div className="career-info-box">

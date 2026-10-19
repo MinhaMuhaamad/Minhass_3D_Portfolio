@@ -30,6 +30,7 @@ const WorkImage = (props: Props) => {
     <>
       {hasLink && (
         <div className="work-link">
+          <span className="work-link-text">Live Preview</span>
           <MdArrowOutward />
         </div>
       )}
@@ -44,6 +45,7 @@ const WorkImage = (props: Props) => {
         <a
           className="work-image-in"
           href={props.link}
+          title={`Open ${props.link}`}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={() => setIsVideo(false)}
           target="_blank"

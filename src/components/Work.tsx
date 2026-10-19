@@ -5,39 +5,40 @@ import { MdArrowBack, MdArrowForward } from "react-icons/md";
 const base = import.meta.env.BASE_URL;
 const projects = [
   {
-    title: "Intellifit",
-    category: "AI-Powered Fitness & Nutrition Platform",
-    tools: "Next.js, React, Node.js, Express, MongoDB, AI Chatbot",
-    image: `${base}images/intellifit.png`,
-    link: "https://github.com/emaanfatima28/Intellifit",
+    title: "Jooblie",
+    category: "Multi-Portal Job Board & Hiring Platform",
+    description:
+      "Developed a full-stack recruitment platform using React, Node.js, Express.js, and Supabase (PostgreSQL). Built role-based authentication, RESTful APIs with Zod validation, resume parsing for skill extraction, a candidate hiring pipeline, and role-specific dashboards for seekers, recruiters, and admins.",
+    tools: "React, Node.js, Express.js, Supabase (PostgreSQL), REST APIs, Zod",
+    image: `${base}updated/jooblie.png`,
+    link: "https://jooblie-updated.vercel.app/",
   },
   {
-    title: "EduConnect Pakistan",
-    category: "Tutor Booking & Learning Platform",
-    tools: "MongoDB, Express, React, Node.js, REST API, Role-based Auth",
-    image: `${base}images/educonnect.png`,
-    link: "https://github.com/MinhaMuhaamad/EDUsystem",
+    title: "Zelvomart",
+    category: "E-Commerce Platform & Admin Management System",
+    description:
+      "Developed a full-stack e-commerce platform using Next.js, React, TypeScript, Node.js, Express.js, Prisma, and PostgreSQL (Supabase). Built JWT authentication with 2FA, role-based staff permissions, idempotent checkout supporting COD and NayaPay, PostEx courier integration, Cloudflare R2 image storage, and Meta and TikTok marketing event tracking.",
+    tools: "Next.js, React, TypeScript, Node.js, Express.js, Prisma, PostgreSQL",
+    image: `${base}updated/zelvomart.png`,
+    link: "https://zelvo-mart.vercel.app/",
   },
   {
-    title: "Traffic Management System",
-    category: "Traffic Management",
-    tools: "MongoDB, Express, React, Node.js, REST API, Algorithms",
-    image: `${base}images/traffic.png`,
-    link: "",
+    title: "Resilient Minds Foundation",
+    category: "Mental Wellness Non-Profit Website",
+    description:
+      "Built a responsive multi-page website using React 19, Vite, React Router, and Tailwind CSS. Developed an accessible component library featuring FAQ accordions and a mobile navigation drawer, validated inquiry and donation pickup forms, and integrated asynchronous email submissions with loading and error states.",
+    tools: "React 19, Vite, React Router, Tailwind CSS, Email Integration",
+    image: `${base}updated/resilient-minds.png`,
+    link: "https://www.resilientmindsfoundation.ca/",
   },
   {
-    title: "Empathetic Chatbot",
-    category: "Emotion-Aware Conversational AI",
-    tools: "PyTorch, Streamlit, NLP, EmpatheticDialogues Dataset",
-    image: `${base}images/chatbot.png`,
-    link: "https://github.com/MinhaMuhaamad/Chatbot_project",
-  },
-  {
-    title: "Course Scheduler",
-    category: "Real-Time Course Scheduling App",
-    tools: "HTML, CSS, JavaScript, EJS, Node.js, Express, MongoDB",
-    image: `${base}images/scheduler.png`,
-    link: "https://github.com/MinhaMuhaamad/EDUsystem",
+    title: "World Education Society",
+    category: "Study Abroad & Educational Consultancy Platform",
+    description:
+      "Built a responsive modern web platform for international educational consultancy using React, Vite, and Tailwind CSS. Developed university admissions guidance, interactive program search across 70+ partner institutions, consultation inquiry booking, and dynamic program filters.",
+    tools: "React, Vite, Tailwind CSS, Responsive UI, Interactive Search",
+    image: `${base}updated/world-education-society.png`,
+    link: "https://world-education-society.vercel.app/",
   },
 ];
 
@@ -111,10 +112,26 @@ const Work = () => {
                         <p className="carousel-category">
                           {project.category}
                         </p>
+                        <p className="carousel-description">
+                          {project.description}
+                        </p>
                         <div className="carousel-tools">
                           <span className="tools-label">Tools & Features</span>
                           <p>{project.tools}</p>
                         </div>
+                        {project.link && (
+                          <div className="carousel-link-wrap">
+                            <a
+                              href={project.link}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="carousel-live-link"
+                              data-cursor="disable"
+                            >
+                              Live Project ↗
+                            </a>
+                          </div>
+                        )}
                       </div>
                     </div>
                     <div className="carousel-image-wrapper">
